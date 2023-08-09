@@ -1,6 +1,6 @@
 const path = require('path')
 const express = require('express')
-const axios = require('axios').default()
+const axios = require('axios')
 const router = require('./routes/routes')
 const app = express()
 const config = require("./config");
@@ -28,5 +28,5 @@ app.use("/", express.static(path.join(__dirname, "/public")));
 app.use(router)
 
 app.listen(port, () => {
-    console.log(`Listening`)
+    console.log(`Listening on PORT`)
 })
